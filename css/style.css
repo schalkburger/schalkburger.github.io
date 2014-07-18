@@ -1,0 +1,71 @@
+body {
+	padding-top: 50px;
+	font-family: 'Open Sans', sans-serif;
+	background:#F2F2F2;
+}
+
+h1 {
+  color: #6996a5;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 36px;
+  padding: 20px 0 10px;
+}
+
+.navbar {
+  min-height: 70px;
+}
+
+.navbar-nav > li > a {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.navbar-header {
+	padding:10px 0 0 0;
+}
+
+.navbar-brand {
+	font-family: 'Varela Round', sans-serif;
+	font-size:30px;
+	text-shadow: 0 1px 2px #267B97;
+}
+
+.navbar-inverse {
+  background-color: #319FC4;
+  border-color: #FFF;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav {
+	font-size:18px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFF;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #80CAE3;
+}
+
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: #2C8FAF;
+}
+
+.starter-template {
+	padding: 40px 15px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+
+
+
+
