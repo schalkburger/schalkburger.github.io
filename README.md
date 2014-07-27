@@ -1,3 +1,3 @@
-# Schalk Burger
+# Schalk Burger Web Developer
 
-Hello world! This is the future home of my Github projects
+Hello world! This is the default projects template.
