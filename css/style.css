@@ -1,19 +1,55 @@
+/*------------------------------------*\
+    CONTENTS
+\*------------------------------------*/
+/*
+$main
+$fonts
+$nav
+$footer
+$responsive
+*/
+
 /* $main */
 
 body {
-padding-top: 20px;
 font-family: 'Open Sans', Arial, sans-serif;
-background:#F2F2F2;
-}
-
-.layout {
-padding: 40px 0;
+background:#F6F6F6;
+color:#666;
 }
 
 h1 {
 color: #6996a5;
 font-family: 'Varela Round', sans-serif;
-padding: 20px 0 10px;
+padding: 0 0 10px;
+}
+
+.btn-primary {
+background-color: #319fc4;
+border-color: #84bbf3;
+color: #fff;
+font-weight:600;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color: #3393b3;
+    border-color: #84bbf3;
+    color: #fff;
+}
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+  font-size: 43px;
+  font-weight:600;
+  font-family: 'Open Sans', Arial, sans-serif;
+  color:#878787;
+  text-shadow:1px 2px 1px #fdfdfd;
+  line-height:1.2;
+}
+
+.jumbotron h1 span {
+  color:#1e8ea5;
 }
 
 /* $fonts */
@@ -53,6 +89,17 @@ font-style: italic;
 
 @font-face {
 font-family: 'Open Sans';
+src: url('../font/OpenSans-Semibold-webfont.eot');
+src: url('../font/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+url('../font/OpenSans-Semibold-webfont.woff') format('woff'),
+url('../font/OpenSans-Semibold-webfont.ttf') format('truetype'),
+url('../font/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+font-weight: 600;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Open Sans';
 src: url('../font/OpenSans-Bold-webfont.eot');
 src: url('../font/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
 url('../font/OpenSans-Bold-webfont.woff') format('woff'),
@@ -67,6 +114,7 @@ font-style: normal;
 .navbar {
 min-height: 70px;
 text-transform:lowercase;
+margin-bottom:0;
 }
 
 .navbar-nav > li > a {
@@ -81,8 +129,10 @@ padding:10px 0 0 0;
 .navbar-brand {
 font-family: 'Varela Round', Arial, sans-serif;
 text-shadow:0px 0px 1px rgba(255,255,255,1), 1px 2px 2px rgba(0,0,0,0.3);
-letter-spacing:-1px;
-font-size:35px;
+letter-spacing:-0.1px;
+font-size:25px;
+text-transform: uppercase;
+font-weight: bold;
 }
 
 .navbar-inverse {
@@ -115,11 +165,17 @@ background:#2A88A7;
 border-color: #2C8FAF;
 }
 
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #2A88A7;
+  color: #fff;
+}
+
 /* $footer */
 
 .footer {
-border-top:1px solid #E6E6E6;
-box-shadow:0 1px 0 0 rgba(255,255,255,0.5) inset;
+margin-top:40px;
+background:#F5F5F5;
+box-shadow:2px 4px 12px -4px rgba(37, 37, 37, 0.1) inset;
 }
 
 .footer p {
@@ -131,8 +187,14 @@ color:#636363;
 /* $responsive */
 
 @media (max-width: 767px) {
+
 .navbar-nav > li > a {
 line-height: 20px;
 padding-top: 10px;
 padding-bottom: 10px;}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  color: #fff;
+}
+
 }
