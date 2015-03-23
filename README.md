@@ -1,3 +1,3 @@
-# Schalk Burger Web Developer
+# Schalk Burger Projects Template
 
-Hello world! This is the default projects template.
+This is the default projects template that I use at [schalkburger.za.net](http://www.schalkburger.za.net).
