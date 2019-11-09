@@ -1,3 +1,3 @@
-# Schalk Burger Projects Template
+# Schalk Burger's Projects
 
-This is the default projects template that I use at [schalkburger.za.net](http://www.schalkburger.za.net).
+This is the Github Pages website for projects that I've built on [schalkburger.io](https://schalkburger.io).
