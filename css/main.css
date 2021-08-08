@@ -146,7 +146,6 @@ a {
 }
 
 .active {
-  color: var(--color-white);
   font-weight: 500;
 }
 
@@ -194,6 +193,10 @@ a {
   align-items: center;
 }
 
+.header a {
+  color: var(--color-white);
+}
+
 .header span:before {
   content: "";
   position: relative;
@@ -207,9 +210,9 @@ a {
 }
 
 .sidebar {
-  flex-grow: 1;
   display: flex;
   margin-top: 4rem;
+  flex-basis: 15%;
 }
 
 /* Main */
@@ -227,9 +230,9 @@ section {
 /* Nav */
 
 aside {
-  flex-basis: 15%;
   padding: 1rem 2rem;
   background: var(--color-midnightblue);
+  min-width: 150px;
 }
 
 aside h3 {
@@ -244,6 +247,7 @@ aside nav {
 
 aside nav a {
   font-size: 18px;
+  font-weight: 300;
   margin: 0.25rem 0;
 }
 
@@ -272,7 +276,15 @@ aside nav a {
 /* Footer */
 
 .footer {
-  min-height: 100px;
+  min-height: 50px;
+  padding: 40px 0;
+  background: var(--color-resolutionblue);
+  width: 100%;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .video-wrapper {
