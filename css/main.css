@@ -107,6 +107,7 @@ body {
     segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   background: var(--color-resolutionblue);
   color: var(--color-white);
+  overflow: hidden;
 }
 
 /* Typography */
@@ -122,13 +123,6 @@ h5 {
   letter-spacing: -1.5px;
 }
 
-p {
-  margin: 0;
-  padding: 0;
-  line-height: 1.4;
-  color: var(--color-pigeonpost);
-}
-
 h1 {
   font-size: 80px;
   font-weight: 700;
@@ -138,6 +132,30 @@ h2 {
   font-size: 60px;
   font-weight: 400;
   color: var(--color-periwinkle);
+}
+
+h3 {
+  color: var(--color-white);
+  font-size: 45px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: var(--color-white);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--color-white);
 }
 
 a {
@@ -174,10 +192,11 @@ a {
 .header .container,
 .logo {
   display: flex;
+  align-items: center;
 }
 
 .header .container {
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .header h1 {
@@ -209,9 +228,99 @@ a {
   background: var(--color-white);
 }
 
+/* Menu */
+
+.menu-control-open,
+.menu-control-close,
+header nav,
+header a {
+  color: #f0f0f0;
+}
+
+.menu-control-open,
+.menu-control-close {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-control-open {
+  position: absolute;
+  margin: 0;
+  left: 4rem;
+}
+
+.menu-control-open svg {
+  width: 35px;
+  height: 35px;
+}
+
+.menu-control-close {
+  position: absolute;
+  right: 1rem;
+  top: 1.5em;
+  fill: #fff;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  color: #f0f0f0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* Unnecessary styles for the menu footer */
+}
+
+.menu a {
+  /* transform: translate3d(-150px, 0, 0); */
+  /* transition: transform 0.15s ease-in; */
+}
+
+.menu .menu-inner {
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+
+.menu--active {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu--active nav a {
+  transform: translate3d(0, 0, 0);
+  /* transition: transform 500ms ease-out; */
+  /* Handles items within the slide-out to give them the delayed slide-in */
+}
+
+.menu--active nav a:first-child {
+  transition-delay: 0.2s;
+}
+
+.menu--active nav a:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.menu--active nav a:last-child {
+  transition-delay: 0.4s;
+}
+
+.menu--active .menu {
+  width: 300px;
+}
+
+/* Sidebar */
+
 .sidebar {
   display: flex;
-  margin-top: 4rem;
   flex-basis: 15%;
 }
 
@@ -219,12 +328,19 @@ a {
 
 .main {
   display: flex;
+  position: relative;
+}
+
+.content {
+  display: flex;
   flex: 0 1 100%;
+  margin-top: 4rem;
+  position: relative;
 }
 
 section {
   width: 100%;
-  padding: 0 0 0 4rem;
+  padding: 0;
 }
 
 /* Nav */
@@ -233,11 +349,13 @@ aside {
   padding: 1rem 2rem;
   background: var(--color-midnightblue);
   min-width: 150px;
+  height: 100%;
 }
 
-aside h3 {
-  margin: 1rem 0;
+aside h4 {
+  margin: 0.8rem 0;
   letter-spacing: 0;
+  white-space: nowrap;
 }
 
 aside nav {
@@ -251,26 +369,10 @@ aside nav a {
   margin: 0.25rem 0;
 }
 
-/* Hero */
-
-.hero {
-  flex-direction: column;
-  padding: 0 0 0 4rem;
-}
-
-.hero h2 {
-  color: var(--color-white);
-  font-size: 65px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 35px;
-  font-weight: 300;
-  margin: 0 0 1rem 0;
-  max-width: 700px;
-  color: var(--color-white);
+main {
+  display: flex;
+  flex: 0 1 100%;
+  padding: 0;
 }
 
 /* Footer */
@@ -284,7 +386,12 @@ aside nav a {
 
 .footer .container {
   display: flex;
-  justify-content: flex-end;
+  border-top: 1px solid var(--color-cobalt);
+  padding-top: 2rem;
+}
+
+.footer p {
+  font-size: 18px;
 }
 
 .video-wrapper {

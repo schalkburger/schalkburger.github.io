@@ -27,42 +27,90 @@
     <meta name="theme-color" content="#fafafa" />
   </head>
 
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
+        <div class="menu-control-open" id="menuControlOpen">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+          >
+            <path fill="none" d="M0 0h24v24H0z" />
+            <path
+              d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+              fill="rgba(255,255,255,1)"
+            />
+          </svg>
+        </div>
         <div class="logo">
-          <h1><a href="index.html">Schalk Burger</a></h1>
+          <h1><a href="/">Schalk Burger</a></h1>
           <span>Open Source</span>
         </div>
-        <!-- <div class="menu"><button>Menu</button></div> -->
       </div>
     </header>
-    <div class="container sidebar">
-      <aside>
-        <h3>Utilities</h3>
-        <nav>
-          <a href="#">Phassist</a>
-          <a href="videoplayer">Video Player</a>
-        </nav>
-        <h3>Stylus Themes</h3>
-        <nav>
-          <a href="#">Bitwarden Vault</a>
-        </nav>
-      </aside>
-      <main class="hero">
-        <h2>Hello, I'm Schalk</h2>
-        <p>I’m a UI Designer and Front-end Developer.</p>
-        <p>
-          Here you can browse some of the open source projects that I have on
-          Github.
-        </p>
-      </main>
+    <div class="main">
+      <div class="menu">
+        <div class="menu-inner">
+          <span class="menu-control-close" id="menuControlClose"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95
+              4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414
+              4.95-4.95-4.95-4.95L7.05 5.636z" "/>
+            </svg></span
+          >
+          <aside>
+            <h4>Utilities</h4>
+            <nav>
+              <a href="#">Phassist</a>
+              <a href="videoplayer.html">Video Player</a>
+            </nav>
+            <h4>Stylus Themes</h4>
+            <nav>
+              <a href="#">Bitwarden Vault</a>
+            </nav>
+          </aside>
+        </div>
+      </div>
+      <div class="container content">
+        <main>
+          <section>
+            <h3>Hello, I'm Schalk</h3>
+            <p>I’m a UI Designer and Front-end Developer.</p>
+            <p>
+              Here you can browse some of the open source projects that I have
+              on Github.
+            </p>
+          </section>
+        </main>
+      </div>
     </div>
     <footer class="footer">
       <div class="container">
         <p>&copy; 2021 Schalk Burger. All rights reserved</p>
       </div>
     </footer>
+
+    <script>
+      var body = document.getElementById("body");
+      var openMenu = document.getElementById("menuControlOpen"); // or whatever triggers the toggle
+      var closeMenu = document.getElementById("menuControlClose"); // or whatever triggers the toggle
+
+      openMenu.addEventListener("click", function (e) {
+        body.classList.toggle("menu--active"); // or whatever your active class is
+      });
+
+      closeMenu.addEventListener("click", function (e) {
+        body.classList.toggle("menu--active"); // or whatever your active class is
+      });
+    </script>
 
     <!-- <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
