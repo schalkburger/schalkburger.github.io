@@ -87,8 +87,59 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+:root {
+  --color-white: #fff;
+  --color-resolutionblue: #00337C;
+  --color-periwinkle: #B7D5FF;
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  background: var(--color-resolutionblue);
+  color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--color-periwinkle);
+  letter-spacing: -1.5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container__header,
+.container__footer {
+  flex-shrink: 0;
+}
+
+.container__main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
