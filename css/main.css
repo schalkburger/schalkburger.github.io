@@ -246,6 +246,7 @@ header a {
 .menu-control-open {
   position: absolute;
   margin: 0;
+  top: 4rem;
   left: 4rem;
 }
 
@@ -346,7 +347,7 @@ section {
 /* Nav */
 
 aside {
-  padding: 1rem 2rem;
+  padding: 4rem 3rem;
   background: var(--color-midnightblue);
   min-width: 150px;
   height: 100%;
