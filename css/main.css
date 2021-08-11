@@ -246,13 +246,16 @@ header a {
 .menu-control-open {
   position: absolute;
   margin: 0;
-  top: 4rem;
-  left: 4rem;
+  top: 5rem;
+  left: 0;
+  padding: 0.5rem 0.5rem;
+  background: var(--color-cobalt);
+  border-radius: 0 6px 6px 0;
 }
 
 .menu-control-open svg {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 
 .menu-control-close {
