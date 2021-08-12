@@ -95,6 +95,7 @@ textarea {
   --color-pigeonpost: #bac8db;
   --color-cobalt: #0044a5;
   --color-midnightblue: #002e6f;
+  --color-sapphire: #024db7;
   /* Sizings */
   --container-desktop: 1440px;
   --container-laptop: 1280px;
@@ -254,42 +255,6 @@ a {
 }
 
 /* Menu */
-
-.menu-control-open,
-.menu-control-close,
-header nav,
-header a {
-  color: #f0f0f0;
-}
-
-.menu-control-open,
-.menu-control-close {
-  display: block;
-  cursor: pointer;
-}
-
-.menu-control-open {
-  position: absolute;
-  margin: 0;
-  top: 5rem;
-  left: 0;
-  padding: 0.5rem 0.5rem;
-  background: var(--color-cobalt);
-  border-radius: 0 6px 6px 0;
-}
-
-.menu-control-open svg {
-  width: 25px;
-  height: 25px;
-}
-
-.menu-control-close {
-  position: absolute;
-  right: 1rem;
-  top: 1.5em;
-  fill: #fff;
-}
-
 header nav {
   display: flex;
   flex-direction: column;
@@ -314,31 +279,75 @@ header nav {
   padding: 0;
 }
 
-.menu--active {
+.menu-active {
   height: 100vh;
   overflow: hidden;
 }
 
-.menu--active nav a {
+.menu-active nav a {
   transform: translate3d(0, 0, 0);
   /* transition: transform 500ms ease-out; */
   /* Handles items within the slide-out to give them the delayed slide-in */
 }
 
-.menu--active nav a:first-child {
-  transition-delay: 0.2s;
-}
-
-.menu--active nav a:nth-child(2) {
-  transition-delay: 0.3s;
-}
-
-.menu--active nav a:last-child {
-  transition-delay: 0.4s;
-}
-
-.menu--active .menu {
+.menu-active .menu {
   width: 300px;
+}
+
+.menu-control-container {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+  left: -2rem;
+  top: 0;
+  background: var(--color-sapphire);
+  width: 28px;
+  height: 28px;
+}
+
+.menu-control-open,
+.menu-control-close,
+header nav,
+header a {
+  color: #f0f0f0;
+}
+
+.menu-control-open,
+.menu-control-close {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-control-open,
+.menu-control-close {
+  position: relative;
+  margin: 0;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  transition: visibility 0s, opacity 0.25s ease-in-out;
+}
+
+.menu-control-open svg,
+.menu-control-close svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.menu-control-close {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.menu-active .menu-control-open {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.menu-active .menu-control-close {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Sidebar */
