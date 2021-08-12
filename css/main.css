@@ -88,13 +88,18 @@ textarea {
    ========================================================================== */
 
 :root {
+  /* Colors */
   --color-white: #fff;
   --color-resolutionblue: #00337c;
   --color-periwinkle: #b7d5ff;
   --color-pigeonpost: #bac8db;
   --color-cobalt: #0044a5;
   --color-midnightblue: #002e6f;
-  --container-desktop: 1200px;
+  /* Sizings */
+  --container-desktop: 1440px;
+  --container-laptop: 1280px;
+  --container-tablet: 1024px;
+  --container-mobile: 768px;
 }
 
 html,
@@ -172,8 +177,32 @@ a {
 .container {
   display: flex;
   height: 100%;
-  max-width: var(--container-desktop);
+  max-width: 100%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 748px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .header,
@@ -193,10 +222,6 @@ a {
 .logo {
   display: flex;
   align-items: center;
-}
-
-.header .container {
-  /* justify-content: space-between; */
 }
 
 .header h1 {
@@ -281,11 +306,6 @@ header nav {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   /* Unnecessary styles for the menu footer */
-}
-
-.menu a {
-  /* transform: translate3d(-150px, 0, 0); */
-  /* transition: transform 0.15s ease-in; */
 }
 
 .menu .menu-inner {
